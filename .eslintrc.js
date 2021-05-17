@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
+const config = {
   env: {
     browser: true,
     es2021: true,
@@ -58,3 +59,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = config
