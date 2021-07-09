@@ -10,6 +10,8 @@ const config = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -28,36 +30,28 @@ const config = {
   ],
   rules: {
     'import/extensions': [
-        'error',
-        {
-          js: 'never',
-          jsx: 'never',
-          ts: 'never',
-          tsx: 'never',
-        },
-      ],
-      'react/jsx-filename-extension': [
-        'error',
-        {
-          extensions: ['.jsx', '.tsx'],
-        },
-      ],
-      'react/react-in-jsx-scope': 'off',
-      'no-void': [
-        'error',
-        {
-          allowAsStatement: true,
-        },
-      ],
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      'error',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
-    },
-  },
+    ],
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.jsx', '.tsx'],
+      },
+    ],
+    'react/react-in-jsx-scope': 'off',
+    'no-void': [
+      'error',
+      {
+        allowAsStatement: true,
+      },
+    ],
+  }
 };
 
 module.exports = config
